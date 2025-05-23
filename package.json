@@ -1,0 +1,57 @@
+{
+  "name": "daily-logger-app",
+  "displayName": "Daily Logger",
+  "description": "Daily Logger helps developer remain focus and avoid brain fog after hitting milestones with no records",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.3"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dailyLog.captureEntry",
+        "title": "Daily Log: Capture Entry"
+      },
+      {
+        "command": "dailyLog.viewEntries",
+        "title": "Daily Log: View Entries"
+      }
+    ],
+    "configuration": {
+      "title": "Daily Log Productivity",
+      "properties": {
+        "dailyLog.filePath": {
+          "type": "string",
+          "default": "__USER_DOCUMENTS_DIR__/DailyLog/daily_log.md",
+          "description": "Path to the Markdown log file. Use ${workspaceFolder} for the current workspace root."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/sinon": "^17.0.4",
+    "@types/vscode": "^1.100.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "sinon": "^20.0.0",
+    "typescript": "^5.8.3"
+  }
+}
