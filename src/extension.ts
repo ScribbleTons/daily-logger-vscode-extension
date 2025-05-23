@@ -28,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
       // Get the path to the webview HTML file
       const webviewHtmlPath = vscode.Uri.joinPath(
         context.extensionUri,
-        "src",
+        "out",
         "webview.html"
       );
 

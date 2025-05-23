@@ -12,3 +12,8 @@ Initial release of Daily Log Productivity.
 * Timestamped entries, prepended to a Markdown file.
 * Configurable log file path.
 * Command to view all log entries.
+
+
+## 0.0.2 [Bug fixes]
+
+Write `./webview.html` to `/out`

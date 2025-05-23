@@ -2,7 +2,7 @@
   "name": "daily-logger-app",
   "displayName": "Daily Logger",
   "description": "Daily Logger helps developer remain focus and avoid brain fog after hitting milestones with no records",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "emmanuelugwuokeog", 
   "engines": {
     "vscode": "^1.100.0"
@@ -36,11 +36,12 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
+    "compile": "tsc -p ./ && npm run copy-webview-html",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "copy-webview-html": "cp src/webview.html out/webview.html"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
