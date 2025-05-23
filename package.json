@@ -3,8 +3,9 @@
   "displayName": "Daily Logger",
   "description": "Daily Logger helps developer remain focus and avoid brain fog after hitting milestones with no records",
   "version": "0.0.1",
+  "publisher": "emmanuelugwuokeog", 
   "engines": {
-    "vscode": "^1.99.3"
+    "vscode": "^1.100.0"
   },
   "categories": [
     "Other"
@@ -53,5 +54,9 @@
     "eslint": "^9.25.1",
     "sinon": "^20.0.0",
     "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScribbleTons/daily-logger-vscode-extension.git"
   }
 }
